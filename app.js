@@ -72,12 +72,11 @@ class UI {
             button.disabled = true
         } 
             button.addEventListener('click', (event) => {
-                console.log(event);
                 event.target.innerText = 'In Cart'
                 event.target.disabled = true
                 //get product from products
                 let cartItem = {...Storage.getProduct(id), amount:1}
-                console.log(cartItem)
+                cart = [...cart, cartItem]
                 //add product to cart
                 //save cart to local storage
                 //save cart values
